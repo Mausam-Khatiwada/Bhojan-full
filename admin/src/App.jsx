@@ -7,7 +7,7 @@ import List from './pages/List/List'
 import Order from './pages/Order/Order'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import UsersList from './pages/Users/users'
+import UsersList from './pages/Users/Users'
 
 const App = () => {
 
