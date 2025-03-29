@@ -1,0 +1,242 @@
+.explore-menu {
+  padding: 4rem 0;
+  background-color: #000;
+  position: relative;
+}
+
+.explore-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.explore-menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explore-menu-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.explore-menu-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #f26627;
+}
+
+.explore-menu-text {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.explore-menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 3rem;
+}
+
+.explore-menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+}
+
+.explore-menu-list-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.explore-menu-list-item:hover .menu-image-container {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.explore-menu-list-item:hover .menu-item-image {
+  transform: scale(1.05);
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 4px;
+  background-color: #f26627;
+  border-radius: 2px;
+}
+
+.menu-item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.explore-menu-list-item:hover .menu-item-name {
+  color: #f26627;
+}
+
+.explore-menu-list-item.active .menu-item-name {
+  color: #f26627;
+  font-weight: 700;
+}
+
+.menu-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.divider-line {
+  height: 1px;
+  width: 100px;
+  background-color: #ddd;
+}
+
+.divider-icon {
+  margin: 0 1.5rem;
+  color: #f26627;
+  font-size: 1.5rem;
+  transform: rotate(15deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .explore-menu {
+    padding: 3rem 0;
+  }
+  
+  .explore-menu-title {
+    font-size: 2.2rem;
+  }
+  
+  .explore-menu-text {
+    font-size: 1rem;
+  }
+  
+  .explore-menu-list {
+    gap: 1.5rem;
+  }
+  
+  .menu-image-container {
+    width: 100px;
+    height: 100px;
+  margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-menu {
+    padding: 2.5rem 0;
+  }
+  
+  .explore-menu-title {
+    font-size: 2rem;
+  }
+  
+  .explore-menu-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .menu-image-container {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .menu-item-name {
+    font-size: 1rem;
+  }
+  
+  .divider-line {
+    width: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .explore-menu-container {
+    padding: 0 1rem;
+  }
+  
+  .explore-menu-header {
+    margin-bottom: 2rem;
+  }
+  
+  .explore-menu-title {
+    font-size: 1.8rem;
+  }
+  
+  .explore-menu-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .menu-image-container {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .divider-line {
+    width: 50px;
+  }
+  
+  .divider-icon {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .explore-menu-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .menu-image-container {
+    width: 100px;
+    height: 100px;
+  }
+}

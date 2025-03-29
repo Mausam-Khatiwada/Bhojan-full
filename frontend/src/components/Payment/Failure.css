@@ -1,0 +1,94 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #1a202c; /* Dark background */
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Failure Page Styles */
+  .failure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .failure-message {
+    background-color: #e53e3e; /* Red background for failure */
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Failure Header */
+  .failure-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Failure Description */
+  .failure-description {
+    color: #f7fafc; /* Light gray for text */
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Button Styles */
+  .failure-button {
+    padding: 0.8rem 2rem;
+    background-color: #c53030; /* Darker red for the button */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .failure-button:hover {
+    background-color: #9b2c2c; /* Darker red on hover */
+  }
+  
+  .failure-button:active {
+    transform: scale(0.95); /* Button shrink effect on click */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,28 @@
+.services {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  gap: 80px;
+}
+
+.services img {
+  max-width: 12vw;
+  max-height: 150px;
+}
+.services h2 {
+  margin-top: 10px;
+}
+
+.services p {
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 1050px) {
+  .services {
+    flex-direction: column;
+    display: none;
+  }
+}
